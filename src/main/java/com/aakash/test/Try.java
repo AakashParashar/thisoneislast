@@ -12,22 +12,19 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 
-import com.sun.jersey.api.view.Viewable;
 
 @Path("/launch")
 public class Try {
-	// Viewable view=new
-	// Viewable("http://localhost:8080/thisoneislast/index.html");
 	/*
 	 * @GET public Response getRedirect(@Context ServletContext context) {
 	 * UriBuilder builder = UriBuilder.fromPath(context.getContextPath());
 	 * builder.path("http://localhost:8080/thisoneislast/launch/start"); return
 	 * Response.seeOther(builder.build()).build(); }
 	 */
-
+	
 	@POST
 	@Path("/start")
-	// @Produces("text/html")
+	//@Produces("text/html")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public Response printt(@FormParam("user") String user, @Context ServletContext context) {
 		// return Response.ok(view).build();
