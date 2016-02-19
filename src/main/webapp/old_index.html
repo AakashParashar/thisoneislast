@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<script src="./js/jquery-2.2.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<h2><span class = "label label-default">Learning Hub Powered by Abyeti Technologies!</span></h2>
+	<form method="post" action="rest/launch/start" role ="form">
+		<div class = "form-group">
+		<h3><span class = "label label-default">Launch New Machine</span></h3>
+		<label for = "user">User Name</label>
+		<input type="text" name="user" id="user" class = "form-control" placeholder ="Enter Username"> 
+		<button	type="submit" class="btn btn-info">Start</button>
+		</div>
+		</form>
+	
+	<form method="post" action="rest/create/new" role="form">
+		<div class = "form-group">
+		<h3><span class = "label label-default">Launch Existing Machine</span></h3>
+		<label for = "AMId">Amazon Machine ID</label><br>
+		<input type="text" id="AMId" class = "form-control" placeholder = "Enter Amazon Machine ID">
+		<button type="submit" class="btn btn-info">Launch</button><br>
+		</div>
+	</form>
+	
+	<form method="get" action="rest/create/listAll" role="form">
+		<div class = "form-group">	
+		<h3><span class = "label label-default">Show All Instances</span></h3>
+		<button type="submit" class="btn btn-info">Show</button>
+		</div>
+	</form>
+
+	<form method="post" action="rest/create/listRunning">
+		<div class = "form-group">
+		<h3><span class = "label label-default">List All Running Instances</span></h3>
+		<button type="submit" class="btn btn-info">Show</button>
+		</div>
+	</form>
+
+	<form method="post" action="rest/create/terminate">
+		<div class = "form-group">
+		<h3><span class = "label label-default">Shut Down Instances</span></h3>
+		<label for = "terminateID">Enter Amazon Machine ID</label><br>
+		<input type="text" id="terminateID" class = "form-control">
+		<button type="submit" class="btn btn-info">Terminate</button>
+		</div>
+	</form>
+
+
+</body>
+</html>
